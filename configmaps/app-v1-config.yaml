@@ -1,0 +1,57 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-v1-config
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <style>
+          body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(45deg, #0066ff, #00ccff);
+            color: white;
+            text-align: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
+          .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+          }
+          h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+          }
+          .version {
+            font-size: 1.5em;
+            color: #ffff00;
+            animation: pulse 2s infinite;
+          }
+          .emoji {
+            font-size: 4em;
+            margin: 20px 0;
+          }
+          @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+          }
+        </style>
+      </head>
+      <body>
+        <div class="container">
+          <h1>Bem-vindo ao Kubernetes Demo!</h1>
+          <div class="version">Versao 1.0.0 (Blue)</div>
+        </div>
+      </body>
+    </html>
